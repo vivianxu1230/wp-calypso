@@ -188,6 +188,10 @@ object BuildDockerImage : BuildType({
 		}
 	}
 
+	failureConditions {
+		executionTimeoutMin = 20
+	}
+
 	features {
 		perfmon {
 		}
