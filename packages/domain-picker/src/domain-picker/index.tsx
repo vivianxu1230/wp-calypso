@@ -381,7 +381,7 @@ const DomainPicker: FunctionComponent< Props > = ( {
 											times( placeholdersCount, ( i ) => (
 												<SuggestionItemPlaceholder type={ itemType } key={ i } />
 											) ) }
-										{ ! areDependenciesLoading && existingSubdomain && onUseYourDomainClick && (
+										{ ! areDependenciesLoading && onUseYourDomainClick && (
 											<UseYourDomainItem onClick={ onUseYourDomainClick } />
 										) }
 									</ItemGrouper>
