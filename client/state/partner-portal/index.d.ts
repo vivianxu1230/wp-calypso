@@ -19,6 +19,7 @@ export interface Partner {
 }
 
 export interface PartnersState {
+	hasFetched: boolean;
 	isFetching: boolean;
 	activePartnerKey: number;
 	all: Partner[];

@@ -66,7 +66,7 @@ export default function SelectPartnerKey() {
 					<Card>{ translate( 'You are not registered as a partner.' ) }</Card>
 				) }
 
-				{ keys }
+				{ ! isFetching && keys }
 			</Main>
 		</>
 	);

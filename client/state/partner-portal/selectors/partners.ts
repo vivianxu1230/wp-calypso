@@ -28,6 +28,10 @@ export function hasActivePartnerKey( state: PartnerPortalStore ) {
 	return !! getActivePartnerKey( state );
 }
 
+export function hasFetchedPartners( state: PartnerPortalStore ) {
+	return state.partnerPortal.partners.hasFetched;
+}
+
 export function isFetchingPartners( state: PartnerPortalStore ) {
 	return state.partnerPortal.partners.isFetching;
 }
