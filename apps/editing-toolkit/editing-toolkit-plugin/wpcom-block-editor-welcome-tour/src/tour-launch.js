@@ -26,6 +26,9 @@ function LaunchWpcomWelcomeTour() {
 	const isWpcomNuxEnabled = useSelect( ( select ) =>
 		select( 'automattic/nux' ).isWpcomNuxEnabled()
 	);
+	const isTourManuallyOpened = useSelect( ( select ) =>
+		select( 'automattic/nux' ).isTourManuallyOpened()
+	);
 	const { setWpcomNuxStatus } = useDispatch( 'automattic/nux' );
 
 	// Preload first card image (others preloaded after NUX status confirmed)
@@ -53,6 +56,7 @@ function LaunchWpcomWelcomeTour() {
 
 		recordTracksEvent( 'calypso_editor_wpcom_tour_open', {
 			is_gutenboarding: window.calypsoifyGutenberg?.isGutenboarding,
+			is_manually_opened: isTourManuallyOpened,
 		} );
 		return () => {
 			document.body.removeChild( portalParent );
