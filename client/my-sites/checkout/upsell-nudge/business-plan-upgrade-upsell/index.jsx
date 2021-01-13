@@ -220,6 +220,7 @@ export class BusinessPlanUpgradeUpsell extends PureComponent {
 									'The good news is that you can upgrade your plan today and try the Business plan risk-free thanks to our {{b}}%(days)d-day money-back guarantee{{/b}}.',
 									{
 										count: hasSevenDayRefundPeriod ? 7 : 14,
+										components: { b: <b /> },
 										args: { days: hasSevenDayRefundPeriod ? 7 : 14 },
 									}
 								)
