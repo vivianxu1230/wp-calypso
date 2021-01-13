@@ -258,7 +258,6 @@ function PurchaseMetaPrice( { purchase } ) {
 }
 
 function PurchaseMetaPaymentDetails( { purchase, getChangePaymentMethodUrlFor, siteSlug, site } ) {
-	const translate = useTranslate();
 	const handleEditPaymentMethodClick = () => {
 		recordTracksEvent( 'calypso_purchases_edit_payment_method' );
 	};
@@ -267,14 +266,7 @@ function PurchaseMetaPaymentDetails( { purchase, getChangePaymentMethodUrlFor, s
 		return null;
 	}
 
-	const paymentDetails = (
-		<span>
-			<em className="manage-purchase__detail-label">{ translate( 'Payment method' ) }</em>
-			<span className="manage-purchase__detail">
-				<PaymentInfoBlock purchase={ purchase } />
-			</span>
-		</span>
-	);
+	const paymentDetails = <PaymentInfoBlock purchase={ purchase } />;
 
 	if (
 		! canEditPaymentDetails( purchase ) ||
