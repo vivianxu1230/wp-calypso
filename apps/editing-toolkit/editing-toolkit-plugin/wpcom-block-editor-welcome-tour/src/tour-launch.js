@@ -61,7 +61,7 @@ function LaunchWpcomWelcomeTour() {
 		return () => {
 			document.body.removeChild( portalParent );
 		};
-	}, [ isWpcomNuxEnabled, portalParent ] );
+	}, [ isTourManuallyOpened, isWpcomNuxEnabled, portalParent ] );
 
 	if ( ! isWpcomNuxEnabled ) {
 		return null;
